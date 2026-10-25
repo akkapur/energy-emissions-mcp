@@ -1,0 +1,18 @@
+[project]
+name = "energy-emissions-mcp"
+version = "0.1.0"
+description = "MCP server exposing US energy and emissions data (EPA GHGRP first) as tools for AI agents"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "httpx==0.28.1",
+    "mcp[cli]==2.3.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
